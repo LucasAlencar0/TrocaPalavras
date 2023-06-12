@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troca Palavras</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        body{
+            background-image: url(miles.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgb(2, 0, 27);
+            font-family: 'Roboto', sans-serif;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 210%;
+            background-color: rgba(0, 0, 0, 0.5);
+            mix-blend-mode: multiply;
+          }
+      header{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        align-items: center;
+        width: 1200px;
+        
+      }
+     
+    nav {
+        display: flex;
+        gap: 40px;
+        font-size: 20px;
+    }
+    nav a{
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: white;
+        position: relative;
+    }
+    
+    nav a::after {
+        content: " ";
+        width: 0%;
+        height: 3px;
+        background-color: rgb(247, 4, 44);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s ease;
+    }
+    nav a:hover::after {
+        width: 100%;
+    }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        position: relative;
+      }
+
+      .jogo {
+        text-align: center;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        position: relative;
+        color: rgb(255, 255, 255);
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        position: relative;
+        color: rgb(247, 4, 44);
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 5px;
+        color: #ffffff;
+      }
+
+      .filme {
+        color: rgb(247, 4, 44);
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: rgb(247, 4, 44);
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(153, 5, 29);
+      }
+
+     
+footer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.img-final {
+    background: url(rodape.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2698px;
+    height: 372px;
+    text-align: center;
+
+
+
+}
+
+.novidades-promomocoes {
+    padding-top: 200px;
+    color: rgb(247, 4, 44);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.novidades-promomocoes h6 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.novidades-promomocoes input {
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+
+}
+
+.novidades-promomocoes button {
+    width: 55px;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(247, 4, 44);
+    color: white;
+}
+.novidades-promomocoes button:hover{
+    background-color: rgb(190, 5, 36);
+}
+
+.final-rodape {
+    margin-top: 50px;
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    
+
+}
+.final-rodape h6 {
+    color: rgb(247, 4, 44);
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.final-rodape p{
+    color: white;
+}
+.final-rodape p:hover{
+    color: rgb(165, 163, 163);
+    cursor: pointer;
+}
+/* FINAL PÁGINA HOME */
+
+    
+    </style>
+  </head>
+
+  <body>
+    <!-- TOPO DA PÁGINA -->
+    <header>
+        <a href="https://lucasalencar0.github.io/PlataformaGame/"><img src="logo.png" alt="" height="100"></a>
+        <nav class="nav">
+          <a href="">Contato</a>
+          <a href="">Sobre</a>
+          <a href="">Discord</a>
+        </nav>
+      </header>
+    <main>
+      <div class="jogo">
+        <h1>Bem-vindo ao Jogo dos Filmes</h1>
+
+        <h3>Digite uma palavra e veja o que acontece!</h3>
+
+        <p>
+          Homem-Aranha: De volta ao
+          <strong id="Filme_1" class="filme">lar</strong>
+        </p>
+        <p>O <strong id="Filme_2" class="filme">Incrível</strong> Hulk</p>
+        <p>
+          Homem-Formiga e a <strong id="Filme_3" class="filme">Vespa</strong>
+        </p>
+        <p><strong id="Filme_4" class="filme">Homem</strong> de Ferro</p>
+        <p>Guardiões da <strong id="Filme_5" class="filme">Galáxia</strong></p>
+        <br />
+        <input
+          type="text"
+          id="palavra"
+          placeholder="Digite uma palavra"
+        /><br /><br />
+        <button onclick="muda_palavra()">Jogar</button>
+        <br /><br />
+      </div>
+    </main>
+ <!-- RODAPÉ -->
+ <footer>
+    <section class="img-final">
+      <section class="novidades-promomocoes">
+        <h6>RECEBA NOVIDADES E AVISOS</h6>
+        <input type="text" placeholder="seu nome" maxlength="20">
+        <input type="text" placeholder="Seu email" maxlength="16">
+        <button class="buttons">OK</button>
+      </section>
+    </section>
+    <section class="final-rodape">
+      <article>
+        <h6>INSTITUCIONAL</h6>
+        <a style="text-decoration: none;" href="quem-somos.html">
+          <p>QUEM SOMOS</p>
+        </a>
+        <a style="text-decoration: none;" href="produtos.html">
+          <P>CONTATO</P>
+        </a>
+        <a style="text-decoration: none;" href="produtos.html">
+          <P>DISCORD</P>
+        </a>
+      </article>
+      <article>
+        <h6>ACESSO RÁPIDO</h6>
+        <p>Eai, vai jogar o que?</p>
+        <P>Play on!</P>
+        <p>Workstation</p>
+
+      </article>
+      <article>
+        <h6>PEÇAS E ACESSÓRIOS</h6>
+        <p>Peças</p>
+        <p>Acessórios</p>
+
+      </article>
+    </section>
+    <h5 style="color: rgb(189, 189, 189); margin-top: 35px;">copyright © 2022 todos os direitos reservados LUCAS ALENCAR
+    </h5>
+  </footer>
+    <script>
+      function muda_palavra() {
+        var palavra = document.getElementsByTagName("strong");
+        var nova_palavra = document.getElementById("palavra").value;
+
+        console.log(nova_palavra);
+
+        for (i = 0; 1 < palavra.length; i++) {
+          palavra[i].innerHTML = nova_palavra;
+        }
+      }
+    </script>
+  </body>
+</html>
